@@ -1,0 +1,111 @@
+{{#section 'head'}}
+{{/section}}
+
+<section class="fullContent">
+    <div class="container-fluid">
+        <div class="block-header">
+            <h2>
+                INTEGRANTES
+                <small>Elias Eskaff, Lorenzo Baena, Cristian Camilo David, Oscar Uribe, Juan Diego Torres</small>
+            </h2>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+            <div class="card">
+                <div class="header">
+                    <h2>REPORTE DE RESULTADOS</h2>
+                    <ul class="header-dropdown m-r--5">
+                        <li class="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="material-icons">more_vert</i>
+                            </a>
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="javascript:void(0);">Action</a></li>
+                                <li><a href="javascript:void(0);">Another action</a></li>
+                                <li><a href="javascript:void(0);">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="body">
+                    {{#if posible}}
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                <div class="info-box-2 bg-deep-purple hover-zoom-effect">
+                                    <div class="icon">
+                                        <i class="material-icons">access_alarm</i>
+                                    </div>
+                                    <div class="content">
+                                        <div class="text">MESES</div>
+                                        <div class="number count-to" data-from="0" data-to="{{meses}}" data-speed="1000" data-fresh-interval="1">125</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                <div class="info-box-2 bg-red hover-zoom-effect">
+                                    <div class="icon">
+                                        <i class="material-icons">attach_money</i>
+                                    </div>
+                                    <div class="content">
+                                        <div class="text">META DE</div>
+                                        <div class="number count-to" data-from="0" data-to="{{meta}}" data-speed="1000" data-fresh-interval="5"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                <div class="info-box-2 bg-black hover-zoom-effect">
+                                    <div class="icon">
+                                        <i class="material-icons">trending_up</i>
+                                    </div>
+                                    <div class="content">
+                                        <div class="text">PORCENTAJE DE GANANCIA</div>
+                                        <div class="number count-to" data-from="0" data-to="{{porcentaje}}" data-speed="1000" data-fresh-interval="5"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                <div class="info-box-2 bg-green hover-zoom-effect">
+                                    <div class="icon">
+                                        <i class="material-icons">looks_one</i>
+                                    </div>
+                                    <div class="content">
+                                        <div class="text">INVERSION INICIAL</div>
+                                        <div class="number count-to" data-from="0" data-to="{{invInicial}}" data-speed="1000" data-fresh-interval="5"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <p>
+                                    Para alcanzar la meta de los ${{meta}} con un porcentaje de ganancia de {{porcentaje}}% y una inversion inicial de ${{invInicial}},
+                                    se requieren {{meses}} meses
+                                </p>
+                            </div>
+                        </div>
+                    {{else}}
+                        <h1>:( con los datos ingresados jamas se alcanzara ${{meta}}</h1>
+                    {{/if}}
+                    <a href="/">Volver a intentar</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            {{#if posible}}
+                <img src="./images/money/{{img}}.gif" align="middle">
+            {{else}}
+                <img src="./images/money/s{{img}}.gif" align="middle">              
+            {{/if}}
+
+        </div>
+    </div>
+</section>
+
+
+{{#section 'scripts'}}
+    <!-- Jquery CountTo Plugin Js -->
+    <script src="./plugins/jquery-countto/jquery.countTo.js"></script>
+    <!-- Custom Js -->
+    <script src="./js/displayResultado.js"></script>
+{{/section}}
