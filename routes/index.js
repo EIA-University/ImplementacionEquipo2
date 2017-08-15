@@ -16,7 +16,7 @@ router.post('/extrapolar', function(req, res, next) {
     porcentaje: 20, 
     meta: 200000000, 
     img: img,
-    posible: true
+    posible: false
   });
 });
 
