@@ -158,7 +158,6 @@ var img = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
 
           });
 
-
       }else{
         res.render('displayResultados', {
               title: 'Resultados',
@@ -171,13 +170,7 @@ var img = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
               posible: false
 
             });
-
-
-
       }
-
-
-
   });
 
 
