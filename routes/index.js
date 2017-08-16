@@ -135,7 +135,7 @@ router.post('/extrapolar', function(req, res, next) {
 
   var saldo=200000000;
 
-  var interesAnual=0.2;
+  var interesAnual=req.body.intereses;
 
   var interMensual=interesMensual(interesAnual);
 
